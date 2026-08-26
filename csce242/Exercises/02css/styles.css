@@ -1,0 +1,31 @@
+/* Structural */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(images/FinanceStockImage.avif)
+}
+
+#content {
+    background-color:rgba(255,255,255,0.8); /* Can also use rgb (), rgba(), */
+    width: 70%;
+    margin:auto;    /* center in the page */
+    border-radius: 5px;
+    border: 1px solid navy;
+      box-shadow: 10px 10px #8FB332;
+}
+
+header, main, footer {
+    padding: 5px;
+}
+
+header, footer {
+    background: #30728C;
+    color: white;
+}
+
+/* Navigation */
+
+
+/* Typography */
+h1 {
+    color: navy;
+}

@@ -32,14 +32,14 @@ header {
 
 /* Typography */
 h1 {
-    color: #ff6f91; /* Warm pink accent */
+    color: #ff6f91; 
     font-size: 2.2rem;
     margin-bottom: 6px;
 }
 
 h1::before,
 h1::after {
-    content: " ✨ "; /* Cute star accents framing the title */
+    content: " ✨ "; 
 }
 
 h2 {

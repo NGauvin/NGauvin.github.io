@@ -1,0 +1,13 @@
+/* Structural */
+
+/* Cutesy aesthetic fit for a cutesy dog */
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', system-ui, sans-serif;
+    background-color: #fff0f5; 
+    background-image: radial-gradient(#ffb6c1 1.5px, transparent 1.5px); 
+    background-size: 24px 24px;
+    color: #5a4b51; 
+    margin: 0;
+    padding: 30px 0;
+}

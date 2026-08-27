@@ -11,7 +11,8 @@ body {
 }
 
 #content {
-    background-color: ;
+    background-color: white;
+    margin:auto;    /* center in the page */
 }
 
 /* Navigation */

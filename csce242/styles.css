@@ -28,3 +28,20 @@ h1 {
 h2, p {
     color: white;
 }
+
+a {
+    text-decoration: none;
+    color: lime;
+}
+
+#repoLink:hover {
+    color: gold;
+}
+
+#assignment1link:hover {
+    color: goldenrod;
+}
+
+#assignment2link:hover {
+    color:darkgoldenrod
+}

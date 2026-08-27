@@ -23,6 +23,8 @@ body {
 /* Typography */
 h1 {
     color: darkgreen;
+    font-style: italic;
+    -webkit-text-stroke: 1px lightgray;
 }
 
 h2, p {

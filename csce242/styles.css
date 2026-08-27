@@ -10,6 +10,10 @@ h1 {
     color: darkgreen;
 }
 
+h2 {
+    color: rgb(55, 55, 55);
+}
+
 p {
     color: rgb(55, 55, 55);
 }

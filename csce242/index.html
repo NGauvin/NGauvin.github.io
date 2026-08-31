@@ -8,23 +8,62 @@
     <body>
         <div id="content">
             <header>
-                <h1>CSCE 242 Portfolio Page</h1>
-                <h2>Nicolas Gauvin</h2>
-                <p>
+                <div class="author-name">Nicolas Gauvin</div>
+                <h1>CSCE 242: Client-Server Computing</h1>
+                <p class="description">
                     This class covers the fundamentals of building web applications, starting with HTML and CSS for front-end design, then JavaScript to add functionality, and finally Node and server-side JavaScript for back-end data storage and retrieval.
                 </p>
                 <p>
                     <a href="https://github.com/NGauvin/NGauvin.github.io/tree/main" id="repoLink">Github Code Repo</a>
                 </p>
             </header>
+
             <main>
-                <h2>Assignments</h2>
-                <ul>
-                    <li><a href="assignments/assignment1/index.html" id="assignment1link"> HTML Introduction</a></li>
-                    <li><a href="assignments/assignment2/index.html" id="assignment2link"> CSS Introduction</a></li>
-                    <li><a href="assignments/assignment3/index.html" id="assignment3link"> Layout with Flex</a></li>
-                </ul>
+                <!-- Assignments Section -->
+                <section class="portfolio-section">
+                    <h2 class="section-title">Assignments</h2>
+                    <div class="card-container">
+                        <section class="card">
+                            <h3>Assignment 1 - Basic HTML</h3>
+                            <a href="assignments/assignment1/index.html">
+                                <img src="_____" alt="Assignment 1 Screenshot" />
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                        </section>
+
+                        <section class="card">
+                            <h3>Assignment 2 - Basic CSS</h3>
+                            <a href="assignments/assignment2/index.html">
+                                <img src="_______" alt="Assignment 2 Screenshot" />
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                        </section>
+
+                        <section class="card">
+                            <h3>Assignment 3 - Page layout</h3>
+                            <a href="assignments/assignment3/index.html">
+                                <img src="______" alt="Assignment 3 Screenshot" />
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                        </section>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="portfolio-section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="card-container">
+                        <section class="card">
+                            <h3>Project Topic Outline</h3>
+                            <a href="_______">
+                                <img src="_______" alt="Project Topic Screenshot" />
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus lacus augue. Duis sed tincidunt sapien.</p>
+                        </section>
+                    </div>
+                </section>
             </main>
+
             <footer>
                 <p>&copy; nicolasgauvin</p>
             </footer>

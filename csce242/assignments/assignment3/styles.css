@@ -1,0 +1,54 @@
+/* Structure */
+body {
+    font-family: cursive;
+    background-color: lightgray;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+    border: 1px solid darkslategrey;
+}
+
+header {
+    text-align: center;
+    font-size:x-large;
+    color: darkslategrey;
+}
+
+/* Navigation */
+
+#main-nav ul, #quick-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#main-nav li {
+    padding: 5px;
+    background-color: crimson;
+}
+
+a {
+    text-decoration: none;      /* Remobe underline */
+}
+
+#main-nav a {
+    color: white;
+}
+
+/* Typography */
+
+/* Responsive Design */
+
+/* 600 px or larger */
+
+@media (min-width: 1000px) {
+    .columns {
+        display:flex;
+    }
+
+    #main-nav li {
+        flex: 1;
+        border: 1px solid darkred;
+    }
+}

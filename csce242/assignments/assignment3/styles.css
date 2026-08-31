@@ -15,13 +15,13 @@ body {
     background-color: lightgray;
     width: 80%;
     margin: auto;
-    border: 1px solid darkslategrey;
+    border: 1px solid #36454F;
 }
 
 header {
     text-align: center;
     font-size: x-large;
-    color: darkslategrey;
+    color: #36454F;
 }
 
 li {
@@ -29,13 +29,12 @@ li {
 }
 
 a {
-    text-decoration: none;      /* Remove underline */
+    text-decoration: none;
     color: white;
 }
 
-/* Eliminates extra inline space below images */
 img {
-    max-width: 100%;
+    width: 100%;       /* Ensures top-row 500x400 images stretch full edge-to-edge width */
     height: auto;
     display: block;
 }
@@ -66,7 +65,7 @@ img {
     display: flex;
     flex-direction: column;
     padding: 0 10px 10px 10px;
-    margin-bottom: 10px;        /* Spacing for mobile stacked view */
+    margin-bottom: 10px;
 }
 
 #sidebar h2 {
@@ -83,6 +82,17 @@ img {
     background-color: crimson;
 }
 
+#cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 100%;       /* Stretches card block edge-to-edge in mobile view */
+}
+
 #cards-container h3 {
     text-align: center;
     background-color: darkblue;
@@ -90,20 +100,35 @@ img {
     margin: 0;
 }
 
-/* Idea Rows */
+/* Idea Rows (Mobile Layout: Centered buffered images + stacked article) */
 .idea-row {
     margin-bottom: 10px;
+    background-color: #708090; /* Outer background wraps centered images on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.idea-row img {
+    display: block;
+    width: 60%;         /* Restrains 300x300 images so they have side buffer space */
+    max-width: 300px;
+    margin: 15px auto;  /* Centers images vertically and horizontally */
+}
+
+.idea-row article {
+    width: 100%;
+    background-color: #708090;
 }
 
 .idea-row article h3 {
     color: white;
-    background-color: darkslategrey;
     padding: 5px;
 }
 
 .idea-row article p {
     padding: 10px;
-    color: black;
+    color: white;
 }
 
 /* Footer */
@@ -136,9 +161,10 @@ footer {
     }
 
     #cards-container {
-        display: flex;
         flex: 3;
+        flex-direction: row;
         gap: 10px;
+        margin-bottom: 0;
     }
 
     .card {
@@ -146,19 +172,29 @@ footer {
         min-width: 0;
     }
 
-    /* Idea Rows Flexbox Layout */
+    /* Idea Rows Desktop 3-Column Layout */
     .idea-row {
-        display: flex;
-        align-items: center;
+        flex-direction: row;
+        align-items: stretch;
         gap: 10px;
+        background-color: transparent;
     }
 
     .idea-row img {
-        width: 200px; /* Constrains the flanking image widths */
-        flex-shrink: 0;
+        flex: 1;               /* 1 share of flex width */
+        width: 0;              /* Prevents images breaking flex ratio */
+        max-width: none;
+        margin: 0;
+        object-fit: cover;
     }
 
     .idea-row article {
-        flex: 1; /* Takes up all remaining space in the middle */
+        flex: 3;               /* 3 shares of flex width for article */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .idea-row article p {
+        flex: 1;
     }
 }

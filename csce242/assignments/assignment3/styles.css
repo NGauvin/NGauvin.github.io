@@ -1,10 +1,11 @@
 /* Structure */
 body {
     font-family: cursive;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 #content {
+    background-color: lightgray;
     width: 80%;
     margin: auto;
     border: 1px solid darkslategrey;
@@ -14,6 +15,20 @@ header {
     text-align: center;
     font-size:x-large;
     color: darkslategrey;
+}
+
+li {
+    border: 1px solid darkred;
+}
+
+a {
+    text-decoration: none;      /* Remove underline */
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Navigation */
@@ -28,12 +43,30 @@ header {
     background-color: crimson;
 }
 
-a {
-    text-decoration: none;      /* Remobe underline */
+/* top-row */
+
+#sidebar {
+    text-align: center;
+    background-color:#36454F;
 }
 
-#main-nav a {
+#sidebar h2 {
+    color: aqua;
+    flex: 1;
+    align-items: center;
+    margin: 0;
+}
+
+#quick-links {
+    margin: 0;
+    background-color: crimson;
+}
+
+#cards-container h3 {
+    text-align: center;
+    background-color: darkblue;
     color: white;
+    margin: 0;
 }
 
 /* Typography */
@@ -49,6 +82,24 @@ a {
 
     #main-nav li {
         flex: 1;
-        border: 1px solid darkred;
+    }
+
+    #top-row {
+        display:flex;
+    }
+
+    #sidebar {
+        flex: 1;
+    }
+
+    #cards-container {
+        display: flex;
+        flex: 3;
+        gap: 10px;
+    }
+
+    .card {
+        flex: 1;
+        min-width: 0;
     }
 }

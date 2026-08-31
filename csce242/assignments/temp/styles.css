@@ -1,10 +1,3 @@
-/* Universal Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 /* Structure */
 body {
     font-family: cursive;
@@ -20,7 +13,7 @@ body {
 
 header {
     text-align: center;
-    font-size: x-large;
+    font-size:x-large;
     color: darkslategrey;
 }
 
@@ -33,17 +26,14 @@ a {
     color: white;
 }
 
-/* Eliminates extra inline space below images */
 img {
     max-width: 100%;
     height: auto;
-    display: block;
 }
 
+
+
 /* Navigation */
-#main-nav {
-    margin-bottom: 10px; /* Restores border gap above top-row */
-}
 
 #main-nav ul, #quick-links {
     list-style-type: none;
@@ -56,22 +46,23 @@ img {
 }
 
 /* top-row */
+
 #top-row {
     margin-bottom: 10px;
 }
 
 #sidebar {
     text-align: center;
-    background-color: #36454F;
+    background-color:#36454F;
     display: flex;
     flex-direction: column;
-    padding: 0 10px 10px 10px;
-    margin-bottom: 10px;        /* Spacing for mobile stacked view */
+    padding: 0 10px 30px 10px;
 }
 
 #sidebar h2 {
     color: aqua;
     margin: 0;
+
     flex: 1;
     display: flex;
     align-items: center;
@@ -93,9 +84,12 @@ img {
 /* Typography */
 
 /* Responsive Design */
+
+/* 600 px or larger */
+
 @media (min-width: 1000px) {
     .columns {
-        display: flex;
+        display:flex;
     }
 
     #main-nav li {
@@ -103,14 +97,13 @@ img {
     }
 
     #top-row {
-        display: flex;
+        display:flex;
         gap: 10px;
         align-items: stretch;
     }
 
     #sidebar {
         flex: 1;
-        margin-bottom: 0;    /* Removes mobile margin so desktop bottom lines up perfectly */
     }
 
     #cards-container {

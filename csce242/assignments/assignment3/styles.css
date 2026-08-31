@@ -34,7 +34,7 @@ a {
 }
 
 img {
-    width: 100%;       /* Ensures top-row 500x400 images stretch full edge-to-edge width */
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -90,7 +90,7 @@ img {
 }
 
 .card {
-    width: 100%;       /* Stretches card block edge-to-edge in mobile view */
+    width: 100%;     
 }
 
 #cards-container h3 {
@@ -100,10 +100,10 @@ img {
     margin: 0;
 }
 
-/* Idea Rows (Mobile Layout: Centered buffered images + stacked article) */
+/* Idea Rows */
 .idea-row {
     margin-bottom: 10px;
-    background-color: #708090; /* Outer background wraps centered images on mobile */
+    background-color: #708090; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,9 +111,9 @@ img {
 
 .idea-row img {
     display: block;
-    width: 60%;         /* Restrains 300x300 images so they have side buffer space */
+    width: 60%;        
     max-width: 300px;
-    margin: 15px auto;  /* Centers images vertically and horizontally */
+    margin: 15px auto; 
 }
 
 .idea-row article {
@@ -136,7 +136,7 @@ footer {
     text-align: center;
     background-color: crimson;
     color: white;
-    padding: 10px;
+    padding: 30px;
 }
 
 /* Responsive Design (1000px or larger) */
@@ -181,15 +181,15 @@ footer {
     }
 
     .idea-row img {
-        flex: 1;               /* 1 share of flex width */
-        width: 0;              /* Prevents images breaking flex ratio */
+        flex: 1;               
+        width: 0;             
         max-width: none;
         margin: 0;
         object-fit: cover;
     }
 
     .idea-row article {
-        flex: 3;               /* 3 shares of flex width for article */
+        flex: 3;            
         display: flex;
         flex-direction: column;
     }

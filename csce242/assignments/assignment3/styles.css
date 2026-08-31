@@ -42,7 +42,7 @@ img {
 
 /* Navigation */
 #main-nav {
-    margin-bottom: 10px; /* Restores border gap above top-row */
+    margin-bottom: 10px;
 }
 
 #main-nav ul, #quick-links {
@@ -55,7 +55,7 @@ img {
     background-color: crimson;
 }
 
-/* top-row */
+/* Top Row */
 #top-row {
     margin-bottom: 10px;
 }
@@ -90,9 +90,31 @@ img {
     margin: 0;
 }
 
-/* Typography */
+/* Idea Rows */
+.idea-row {
+    margin-bottom: 10px;
+}
 
-/* Responsive Design */
+.idea-row article h3 {
+    color: white;
+    background-color: darkslategrey;
+    padding: 5px;
+}
+
+.idea-row article p {
+    padding: 10px;
+    color: black;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive Design (1000px or larger) */
 @media (min-width: 1000px) {
     .columns {
         display: flex;
@@ -110,7 +132,7 @@ img {
 
     #sidebar {
         flex: 1;
-        margin-bottom: 0;    /* Removes mobile margin so desktop bottom lines up perfectly */
+        margin-bottom: 0;
     }
 
     #cards-container {
@@ -122,5 +144,21 @@ img {
     .card {
         flex: 1;
         min-width: 0;
+    }
+
+    /* Idea Rows Flexbox Layout */
+    .idea-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .idea-row img {
+        width: 200px; /* Constrains the flanking image widths */
+        flex-shrink: 0;
+    }
+
+    .idea-row article {
+        flex: 1; /* Takes up all remaining space in the middle */
     }
 }

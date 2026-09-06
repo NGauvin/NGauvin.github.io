@@ -112,7 +112,19 @@
 /* Responsive Design */
 
 @media (max-width: 768px) {
-    #main-nav {
+    #main-nav,
+    .utility-nav {
         display: none;
+    }
+
+    #top-header {
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 20px;               
+        padding: 20px;
+    }
+
+    #page-title {
+        font-size: 26px;
     }
 }

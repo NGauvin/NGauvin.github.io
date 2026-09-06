@@ -11,6 +11,36 @@
     margin: 0;
 }
 
+#USC-title {
+    display: flex;
+    align-items: center; 
+    gap: 12px;        
+}
+
+#USC-title img {
+    height: 50px;      
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Georgia', serif;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.usc-small {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.usc-large {
+    font-size: 26px;
+    font-weight: normal;
+}
+
 /* Navigation */
 
 #main-nav {
@@ -43,35 +73,35 @@
   align-items: flex-end;          
 }
 
-#header-left {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;                      
+#left-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
 }
 
 .utility-nav {
-  display: flex;
-  gap: 8px;
-  font-size: 11px;
-  font-weight: bold;
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
 }
 
 .utility-nav a {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .utility-nav span {
-  color: #666666;                
+    color: #666666; 
 }
 
-#USC-title h2 {
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: bold;
+#USC-title img {
+    display: block;
+    max-height: 55px; 
 }
 
-/* Right side formatting */
 #page-title {
   color: #ffffff;
   font-size: 32px;

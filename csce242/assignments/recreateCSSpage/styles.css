@@ -117,12 +117,54 @@
     display: block;   
 }
 
-p {
+.body-text {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: larger;
-    padding: 30px 120px 30px 120px;
+    padding: 30px 140px 30px 140px;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px; 
+}
+
+.overlap-box {
+    position: absolute;
+    right: 60px;          
+    bottom: -35px;     
+    width: 60%;        
+    max-width: 1000px;   
+    min-width: 300px;  
+    background-color: #73000A; 
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+}
+
+.box-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.box-text {
+    font-size: large;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.box-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Responsive Design */

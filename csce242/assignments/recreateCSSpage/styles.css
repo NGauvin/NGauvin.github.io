@@ -122,7 +122,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: larger;
-    padding: 30px 140px 30px 140px;
+    padding: 30px 180px 30px 180px;
 }
 
 .hero-container {
@@ -165,6 +165,36 @@
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+#quote-section {
+    display: flex;
+    align-items: center; 
+    gap: 40px;          
+    margin: 0;
+}
+
+#quote-image {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;  
+    object-fit: cover; 
+    flex-shrink: 0;    
+}
+
+#quote-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#quote-text {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #73000A;      /* UofSC Garnet */
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* Responsive Design */

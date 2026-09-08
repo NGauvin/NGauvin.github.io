@@ -3,3 +3,4 @@ function showMessage() {
 }
 
 const btnClick = document.getElementById("btn-show-message");
+btnClick.onclick = showMessage();

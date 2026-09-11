@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 7 - Introduction to JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>Assignment 7</h1>
+    <h2>Introduction to JavaScript</h2>
+  </header>
+
+  <main class="container">
+    <!-- Column 1: Speech -->
+    <section class="card" id="speech-card">
+      <h3>Speech</h3>
+      <div id="speech-bubble" class="speech-bubble hidden">Hi</div>
+    </section>
+
+    <!-- Column 2: Beverage -->
+    <section class="card" id="beverage-card">
+      <h3>Beverage</h3>
+      <div class="input-group">
+        <label for="beverage-select">Pick your morning beverage:</label>
+        <select id="beverage-select">
+          <option value="" disabled selected>-- Select --</option>
+          <option value="Coffee">Coffee</option>
+          <option value="Orange Juice">Orange Juice</option>
+          <option value="Tea">Tea</option>
+          <option value="Water">Water</option>
+        </select>
+      </div>
+      <div id="beverage-output" class="beverage-output"></div>
+    </section>
+
+    <!-- Column 3: Sticker -->
+    <section class="card" id="sticker-card">
+      <h3>Add a Sticker</h3>
+      <div class="image-wrapper" id="image-wrapper">
+        <img src="sun-sticker.png" alt="Smiling Sun Sticker" class="sun-image" id="sun-img">
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <a href="https://portiaplante.com" target="_blank">@nicolasgauvin</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

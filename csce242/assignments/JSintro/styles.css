@@ -1,12 +1,11 @@
 /* Royal Blue Color Palette */
 :root {
-  --bg-color: #f0f4f9;        /* Soft icy-blue background */
-  --card-bg: #ffffff;        /* Crisp white card background */
-  --primary-blue: #1a365d;   /* Dark navy/royal blue for main header */
-  --royal-blue: #2563eb;     /* Primary royal blue for subtitles and highlights */
-  --text-dark: #1e293b;      /* Slate color for readability */
-  --border-color: #cbd5e1;   /* Subtle grey-blue border */
-  --border-active: #1d4ed8;  /* Vibrant royal blue for active elements */
+  --bg-color: #f0f4f9;
+  --card-bg: #ffffff;
+  --primary-blue: #1a365d;
+  --royal-blue: #2563eb;
+  --text-dark: #1e293b;
+  --border-color: #cbd5e1;
 }
 
 * {
@@ -23,55 +22,55 @@ body {
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 /* Header */
 .main-header {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .main-header h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--primary-blue);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .main-header h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--royal-blue);
   font-weight: bold;
 }
 
-/* 3-Column Layout Container */
+/* 3-Column Desktop Layout Container */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
-  margin-bottom: 20px;
+  gap: 80px; /* Large spacing between columns */
+  width: 90%; /* Allows layout to stretch wide across desktop screens */
+  max-width: 1400px; /* Expanded max boundary */
+  margin-bottom: 30px;
 }
 
-/* Card Styling */
+/* Card Styling (Desktop) */
 .card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 20px;
-  min-height: 280px;
+  border-radius: 4px;
+  padding: 25px 20px;
+  height: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .card h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: var(--royal-blue);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 /* Column 1: Speech Bubble Styling */
@@ -90,10 +89,8 @@ body {
   color: var(--primary-blue);
   margin-top: 10px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.2s ease-in-out;
 }
 
-/* Pure CSS Tail Arrow for Speech Bubble */
 .speech-bubble::after {
   content: '';
   position: absolute;
@@ -126,31 +123,31 @@ body {
 .input-group {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
   width: 100%;
-  justify-content: center;
-  margin-bottom: 15px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .input-group label {
   font-size: 0.95rem;
   color: var(--primary-blue);
+  max-width: 160px;
+  line-height: 1.2;
 }
 
 .input-group select {
-  padding: 4px 8px;
+  padding: 3px 6px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   background-color: #ffffff;
   font-size: 0.95rem;
   color: var(--text-dark);
   cursor: pointer;
-  outline-color: var(--royal-blue);
 }
 
 .beverage-output {
   align-self: flex-start;
-  margin-left: 5px;
   font-size: 1rem;
   color: var(--royal-blue);
   font-weight: bold;
@@ -160,7 +157,7 @@ body {
 .image-wrapper {
   position: relative;
   width: 100%;
-  height: 180px;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,16 +165,15 @@ body {
 }
 
 .sun-image {
-  width: 140px;
-  height: 140px;
+  width: 170px;
+  height: 170px;
   object-fit: contain;
   user-select: none;
 }
 
-/* Absolute Positioned Sticker */
 .sticker {
   position: absolute;
-  font-size: 18px;
+  font-size: 20px;
   pointer-events: none;
   transform: translate(-50%, -50%);
   user-select: none;
@@ -186,7 +182,7 @@ body {
 /* Footer */
 .main-footer {
   margin-top: auto;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -205,23 +201,34 @@ body {
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
-    max-width: 400px;
-    gap: 0;
+    max-width: 420px;
+    width: 100%;
+    gap: 0; /* Keeps single-column stacked look on mobile */
   }
 
   .card {
+    height: auto;
+    min-height: unset;
+    padding: 25px 15px;
     border-bottom: none;
     border-radius: 0;
   }
 
-  .card:first-child {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+  #speech-card {
+    padding-bottom: 30px;
+  }
+
+  #beverage-card {
+    padding-bottom: 30px;
   }
 
   .card:last-child {
     border-bottom: 1px solid var(--border-color);
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    padding-bottom: 25px;
+  }
+
+  .sun-image {
+    width: 200px;
+    height: 200px;
   }
 }

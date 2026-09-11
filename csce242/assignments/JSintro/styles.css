@@ -1,0 +1,227 @@
+/* Royal Blue Color Palette */
+:root {
+  --bg-color: #f0f4f9;        /* Soft icy-blue background */
+  --card-bg: #ffffff;        /* Crisp white card background */
+  --primary-blue: #1a365d;   /* Dark navy/royal blue for main header */
+  --royal-blue: #2563eb;     /* Primary royal blue for subtitles and highlights */
+  --text-dark: #1e293b;      /* Slate color for readability */
+  --border-color: #cbd5e1;   /* Subtle grey-blue border */
+  --border-active: #1d4ed8;  /* Vibrant royal blue for active elements */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+.main-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.main-header h1 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 8px;
+}
+
+.main-header h2 {
+  font-size: 1.4rem;
+  color: var(--royal-blue);
+  font-weight: bold;
+}
+
+/* 3-Column Layout Container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: var(--royal-blue);
+  margin-bottom: 20px;
+}
+
+/* Column 1: Speech Bubble Styling */
+#speech-card {
+  cursor: pointer;
+}
+
+.speech-bubble {
+  position: relative;
+  background: var(--card-bg);
+  border: 2px solid var(--primary-blue);
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-top: 10px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Pure CSS Tail Arrow for Speech Bubble */
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -11px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 11px 0 0;
+  border-color: var(--card-bg) transparent transparent transparent;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 14px 14px 0 0;
+  border-color: var(--primary-blue) transparent transparent transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Column 2: Beverage Form Layout */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 0.95rem;
+  color: var(--primary-blue);
+}
+
+.input-group select {
+  padding: 4px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  outline-color: var(--royal-blue);
+}
+
+.beverage-output {
+  align-self: flex-start;
+  margin-left: 5px;
+  font-size: 1rem;
+  color: var(--royal-blue);
+  font-weight: bold;
+}
+
+/* Column 3: Sticker Container */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sun-image {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* Absolute Positioned Sticker */
+.sticker {
+  position: absolute;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+/* Footer */
+.main-footer {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.main-footer a {
+  color: var(--royal-blue);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Mobile Layout (Single Column) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 0;
+  }
+
+  .card {
+    border-bottom: none;
+    border-radius: 0;
+  }
+
+  .card:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .card:last-child {
+    border-bottom: 1px solid var(--border-color);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}

@@ -1,4 +1,4 @@
-/* Royal Blue Color Palette */
+/* royal blue colors */
 :root {
   --bg-color: #f0f4f9;
   --card-bg: #ffffff;
@@ -25,7 +25,7 @@ body {
   padding: 40px 20px;
 }
 
-/* Header */
+/* header */
 .main-header {
   text-align: center;
   margin-bottom: 35px;
@@ -43,17 +43,17 @@ body {
   font-weight: bold;
 }
 
-/* 3-Column Desktop Layout Container */
+/* 3 column grid */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px; /* Large spacing between columns */
-  width: 90%; /* Allows layout to stretch wide across desktop screens */
-  max-width: 1400px; /* Expanded max boundary */
+  gap: 80px;
+  width: 90%;
+  max-width: 1400px;
   margin-bottom: 30px;
 }
 
-/* Card Styling (Desktop) */
+/* card styling */
 .card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -73,7 +73,7 @@ body {
   margin-bottom: 25px;
 }
 
-/* Column 1: Speech Bubble Styling */
+/* col 1: speech bubble */
 #speech-card {
   cursor: pointer;
 }
@@ -91,6 +91,7 @@ body {
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* speech bubble arrow */
 .speech-bubble::after {
   content: '';
   position: absolute;
@@ -119,7 +120,7 @@ body {
   display: none;
 }
 
-/* Column 2: Beverage Form Layout */
+/* col 2: beverage */
 .input-group {
   display: flex;
   align-items: center;
@@ -153,7 +154,7 @@ body {
   font-weight: bold;
 }
 
-/* Column 3: Sticker Container */
+/* col 3: sticker image */
 .image-wrapper {
   position: relative;
   width: 100%;
@@ -179,7 +180,7 @@ body {
   user-select: none;
 }
 
-/* Footer */
+/* footer link */
 .main-footer {
   margin-top: auto;
   padding: 15px;
@@ -197,13 +198,13 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive Mobile Layout (Single Column) */
+/* mobile media query */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
     max-width: 420px;
     width: 100%;
-    gap: 0; /* Keeps single-column stacked look on mobile */
+    gap: 0;
   }
 
   .card {

@@ -1,11 +1,9 @@
-// Wait for DOM content to load before executing JS
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- 1. Speech Feature ---
+  // speech bubble toggle
   const speechCard = document.getElementById('speech-card');
   const speechBubble = document.getElementById('speech-bubble');
 
-  // Toggle CSS speech bubble visibility when column is clicked
   const toggleSpeechBubble = () => {
     speechBubble.classList.toggle('hidden');
   };
@@ -13,11 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   speechCard.addEventListener('click', toggleSpeechBubble);
 
 
-  // --- 2. Beverage Feature ---
+  // beverage dropdown selection
   const beverageSelect = document.getElementById('beverage-select');
   const beverageOutput = document.getElementById('beverage-output');
 
-  // Update beverage display output
   const handleBeverageChange = (event) => {
     const selectedValue = event.target.value;
     if (selectedValue) {
@@ -28,22 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
   beverageSelect.addEventListener('change', handleBeverageChange);
 
 
-  // --- 3. Sticker Feature ---
+  // click image to add sticker
   const imageWrapper = document.getElementById('image-wrapper');
 
-  // Add emoji sticker at exact click coordinates inside wrapper
   const addSticker = (event) => {
-    // Get container dimensions and offset coordinates
+    // get click position inside wrapper
     const rect = imageWrapper.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
-    // Create new sticker span element
+    // make sticker span
     const sticker = document.createElement('span');
     sticker.classList.add('sticker');
     sticker.textContent = '🌞';
 
-    // Position sticker absolutely within relative parent container
+    // set position absolute
     sticker.style.left = `${x}px`;
     sticker.style.top = `${y}px`;
 

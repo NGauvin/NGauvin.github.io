@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - If Statements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Assignment 8</h1>
+        <h2 class="subtitle">If Statements</h2>
+    </header>
+
+    <nav class="desktop-nav">
+        <div class="mobile-toggle" id="menuToggle" onclick="toggleMobileMenu()">
+            <span class="arrow" id="toggleArrow">▼</span>
+        </div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item">
+                <button id="btnEx1" class="active" onclick="showExercise(1)">Exercise 1</button>
+            </li>
+            <li class="nav-item">
+                <button id="btnEx2" onclick="showExercise(2)">Exercise 2</button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <!-- Exercise 1 -->
+            <section id="exercise1" class="exercise-section active">
+                <h3 class="section-title">Missing Class Point Deductions</h3>
+                <div class="form-group">
+                    <label for="daysMissedInput" class="form-label">How many days do you intend to miss class?</label>
+                    <input type="number" id="daysMissedInput" class="number-input" min="0" max="25" oninput="calculateDeduction()">
+                </div>
+                <div id="ex1Result" class="result-message"></div>
+            </section>
+
+            <!-- Exercise 2 -->
+            <section id="exercise2" class="exercise-section">
+                <h3 class="section-title">End of Semester Counter</h3>
+                <div id="ex2Result" class="result-message"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        @nicolasgauvin
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

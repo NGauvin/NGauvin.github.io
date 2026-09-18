@@ -1,0 +1,210 @@
+:root {
+    --bg-color: #f3f4e8;
+    --text-heading: #4a7c85;
+    --text-subheading: #d97878;
+    --border-color: #7ba2a8;
+    --card-bg: #ffffff;
+    --nav-link: #4a7c85;
+    --nav-hover: #2e535a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+h1 {
+    color: var(--text-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+h2.subtitle {
+    color: var(--text-subheading);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+nav {
+    margin-bottom: 22px;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-heading);
+    user-select: none;
+    margin-bottom: 6px;
+}
+
+.mobile-toggle span.arrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-right: 4px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item button {
+    background: none;
+    border: none;
+    color: var(--nav-link);
+    font-size: 1.05rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 2px 8px;
+    transition: color 0.15s ease;
+}
+
+.nav-item button:hover {
+    color: var(--nav-hover);
+    text-decoration: underline;
+}
+
+.nav-item button.active {
+    font-weight: 700;
+}
+
+/* Vertical pipe separator using ::after and :not(:last-child) */
+.desktop-nav .nav-item:not(:last-child)::after {
+    content: " | ";
+    color: var(--nav-link);
+    margin: 0 4px;
+    cursor: default;
+}
+
+@media (max-width: 600px) {
+    .mobile-toggle {
+        display: block;
+    }
+
+    .desktop-nav .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding-top: 4px;
+    }
+
+    .desktop-nav .nav-list.show {
+        display: flex;
+    }
+
+    .desktop-nav .nav-item:not(:last-child)::after {
+        content: "";
+        margin: 0;
+    }
+
+    .nav-item button {
+        padding: 4px 0;
+        font-size: 1rem;
+    }
+}
+
+main {
+    width: 100%;
+    max-width: 680px;
+}
+
+.content-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px 25px;
+    text-align: center;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.exercise-section {
+    width: 100%;
+    display: none;
+}
+
+.exercise-section.active {
+    display: block;
+}
+
+.section-title {
+    color: var(--text-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.form-label {
+    display: block;
+    color: #4a6267;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+
+.number-input {
+    width: 220px;
+    padding: 7px 10px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #2b454b;
+    background-color: #fcfcfc;
+}
+
+.number-input:focus {
+    border-color: #315860;
+    background-color: #ffffff;
+}
+
+.result-message {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #3b575d;
+    line-height: 1.5;
+}
+
+.result-message strong {
+    color: #1e353a;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--text-heading);
+    font-size: 0.95rem;
+}

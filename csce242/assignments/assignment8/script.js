@@ -1,4 +1,4 @@
-// Toggle navigation menu on mobile devices
+// mobile menu toggle
 function toggleMobileMenu() {
     const navList = document.getElementById('navList');
     const toggleArrow = document.getElementById('toggleArrow');
@@ -7,7 +7,7 @@ function toggleMobileMenu() {
     toggleArrow.textContent = isShown ? '▲' : '▼';
 }
 
-// Switch between Exercise 1 and Exercise 2 views
+// switch exercises
 function showExercise(exerciseNumber) {
     const ex1Section = document.getElementById('exercise1');
     const ex2Section = document.getElementById('exercise2');
@@ -25,21 +25,18 @@ function showExercise(exerciseNumber) {
         btnEx1.classList.remove('active');
         btnEx2.classList.add('active');
         
-        // Compute date calculation when Exercise 2 opens
+        // update counter when exercise 2 is clicked
         calculateDaysRemaining();
     }
 
-    // Auto-close menu on click if mobile drawer is open
+    // close menu after clicking link on mobile
     const navList = document.getElementById('navList');
     if (navList.classList.contains('show')) {
         toggleMobileMenu();
     }
 }
 
-/**
- * Exercise 1: Missing Class Points Deduction
- * Total classes = 25, Attendance worth = 7%
- */
+// exercise 1 - calculate grade percentage lost
 function calculateDeduction() {
     const inputVal = document.getElementById('daysMissedInput').value;
     const resultDiv = document.getElementById('ex1Result');
@@ -53,13 +50,13 @@ function calculateDeduction() {
     const totalClasses = 25;
     const attendanceWeight = 7;
 
-    // Math logic: (days missed / 25) * 7
+    // grade deduction formula
     const percentageLost = (daysMissed / totalClasses) * attendanceWeight;
     const formattedLost = percentageLost.toFixed(2);
 
     let message = "";
 
-    // 4+ Unique conditional messages via if / else if / else
+    // check days missed and show message
     if (daysMissed === 0) {
         message = `Perfect attendance! You will not lose any of your ${attendanceWeight}% attendance grade.`;
     } else if (daysMissed <= 2) {
@@ -75,18 +72,15 @@ function calculateDeduction() {
     resultDiv.innerHTML = message;
 }
 
-/**
- * Exercise 2: End of Semester Counter
- * Uses Date object to compute remaining days until December 4th
- */
+// exercise 2 - count days left until Dec 4
 function calculateDaysRemaining() {
     const resultDiv = document.getElementById('ex2Result');
     const today = new Date();
     
     let targetYear = today.getFullYear();
-    let lastDay = new Date(targetYear, 11, 4); // Month 11 = December
+    let lastDay = new Date(targetYear, 11, 4); // Dec 4th
 
-    // Reset to next year if December 4th of current year has passed
+    // if Dec 4 passed, set for next year
     if (today > lastDay) {
         targetYear += 1;
         lastDay = new Date(targetYear, 11, 4);
@@ -97,7 +91,7 @@ function calculateDaysRemaining() {
 
     let feedbackMessage = "";
 
-    // Range-based condition checks
+    // messages for different day ranges
     if (daysLeft > 100) {
         feedbackMessage = "Not time to start counting down yet.";
     } else if (daysLeft > 50) {
@@ -111,20 +105,12 @@ function calculateDaysRemaining() {
     }
 
     resultDiv.innerHTML = `
-        
-
-You have ${daysLeft} days left in the semester
-
-
-        
-
-${feedbackMessage}
-
-
+        <p>You have <strong>${daysLeft}</strong> days left in the semester</p>
+        <p>${feedbackMessage}</p>
     `;
 }
 
-// Initial execution
+// run when page loads
 window.onload = function() {
     calculateDaysRemaining();
 };

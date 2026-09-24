@@ -7,7 +7,7 @@
 
 /* Base Structure */
 body {
-    background-color: #f3f3eb;
+    background-color: #f0f4f8;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
@@ -23,13 +23,13 @@ body {
 
 /* Header Styling */
 h1 {
-    color: #4a828a;
+    color: #1a4b84;
     font-size: 2.2rem;
     margin-bottom: 5px;
 }
 
 h2 {
-    color: #e07a7a;
+    color: #3b82f6;
     font-size: 1.8rem;
     font-weight: normal;
     margin-bottom: 25px;
@@ -37,7 +37,7 @@ h2 {
 
 /* Select Box */
 .select-container {
-    color: #4a828a;
+    color: #1a4b84;
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
@@ -45,10 +45,10 @@ h2 {
 select {
     padding: 4px 8px;
     font-size: 1rem;
-    color: #4a828a;
-    border: 1px solid #4a828a;
+    color: #1a4b84;
+    border: 1px solid #1a4b84;
     border-radius: 2px;
-    background-color: #f3f3eb;
+    background-color: #f0f4f8;
     margin-left: 8px;
 }
 
@@ -62,14 +62,14 @@ select {
 }
 
 #destination-list a {
-    color: #4a828a;
+    color: #2563eb;
     font-size: 1.1rem;
     text-decoration: underline;
     cursor: pointer;
 }
 
 #destination-list a:hover {
-    color: #2b5258;
+    color: #1d4ed8;
 }
 
 /* Map Container & Iframe */
@@ -90,7 +90,7 @@ iframe {
 
 /* Footer Styling */
 footer p {
-    color: #e07a7a;
+    color: #3b82f6;
     font-size: 1.1rem;
     margin-top: 15px;
 }

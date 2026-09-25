@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equity & Stock Valuation - The Art of Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header & Sub-hero -->
+  <div class="hero-wrapper">
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-square"></span>
+          <span>The Art of Finance</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="overview.html">Finance Overview</a></li>
+            <li><a href="tvm.html">Time Value of Money</a></li>
+            <li><a href="debt.html">Debt</a></li>
+            <li><a href="equity.html" class="active">Equity</a></li>
+            <li><a href="#">Alternatives</a></li>
+            <li><a href="#">Applications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Module 04</a>  /  <span>Core Concept</span>
+        </div>
+        <h1>Equity &<br><span class="highlight-text">Stock Valuation</span></h1>
+        <p class="hero-subtext">Equity represents ownership. Learn what stocks are, what drives their value, and how analysts price them using fundamental valuation models.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Page Content -->
+  <main class="container page-content">
+
+    <!-- Section 1 -->
+    <section class="content-block">
+      <div class="section-number">1</div>
+      <h2>What is Equity?</h2>
+      <p>A share of <strong>equity</strong> (or stock) is a fractional ownership claim on a company's assets and future earnings. Shareholders benefit when the company grows, but they are last in line to be paid in a liquidation — after debt holders.</p>
+      <p>Unlike debt, equity has no fixed repayment schedule. The return is entirely driven by the company's performance.</p>
+
+      <!-- Comparison Table -->
+      <div class="table-responsive">
+        <table class="equity-table">
+          <thead>
+            <tr>
+              <th>Characteristic</th>
+              <th>Debt</th>
+              <th>Equity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Claim</strong></td>
+              <td>Fixed (Interest + Principal)</td>
+              <td>Residual (Profits / Assets)</td>
+            </tr>
+            <tr>
+              <td><strong>Priority</strong></td>
+              <td>Senior — paid first</td>
+              <td>Junior — paid last</td>
+            </tr>
+            <tr>
+              <td><strong>Maturity</strong></td>
+              <td>Fixed term (or indefinite for perpetual)</td>
+              <td>Perpetual</td>
+            </tr>
+            <tr>
+              <td><strong>Governance</strong></td>
+              <td>Limited (Covenants)</td>
+              <td>Voting rights (Board, etc.)</td>
+            </tr>
+            <tr>
+              <td><strong>Primary Risk</strong></td>
+              <td>Default</td>
+              <td>Loss of principal</td>
+            </tr>
+            <tr>
+              <td><strong>Return Driver</strong></td>
+              <td>Interest rate</td>
+              <td>Business growth + Dividends</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Capital Structure Stack Diagram -->
+      <div class="cap-stack-container">
+        <span class="cap-stack-title">CAPITAL STRUCTURE STACK</span>
+        <div class="cap-stack">
+          <div class="stack-layer layer-1">
+            <span class="layer-name">Senior Secured Debt</span>
+            <span class="layer-risk">Lowest Risk / First Paid</span>
+          </div>
+          <div class="stack-layer layer-2">
+            <span class="layer-name">Senior Unsecured Debt</span>
+            <span class="layer-risk">Moderate Risk</span>
+          </div>
+          <div class="stack-layer layer-3">
+            <span class="layer-name">Subordinated Debt</span>
+            <span class="layer-risk">Higher Risk</span>
+          </div>
+          <div class="stack-layer layer-4">
+            <span class="layer-name">Preferred Stock</span>
+            <span class="layer-risk">Hybrid Debt & Equity</span>
+          </div>
+          <div class="stack-layer layer-5">
+            <span class="layer-name">Common Equity</span>
+            <span class="layer-risk">Highest Risk / Highest Return Potential</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="content-block">
+      <div class="section-number">2</div>
+      <h2>Valuation Models</h2>
+      <p>The fundamental principle of equity valuation is the same as bond pricing: the value of a stock equals the <strong>present value of all future cash flows</strong> it will generate for its owners.</p>
+
+      <!-- Model 1: DDM -->
+      <div class="formula-card model-card">
+        <span class="model-badge">DDM</span>
+        <h3 class="model-title">Dividend Discount Model</h3>
+        <p>Values a stock as the present value of all future dividends, assuming a constant growth rate g.</p>
+        <div class="formula-box">
+          P = D<sub>1</sub> / (r − g)
+        </div>
+        <div class="model-legend-grid">
+          <div>
+            <strong>D<sub>1</sub></strong>
+            <p>Next year's dividend</p>
+          </div>
+          <div>
+            <strong>r</strong>
+            <p>Required rate of return</p>
+          </div>
+          <div>
+            <strong>g</strong>
+            <p>Constant dividend growth rate</p>
+          </div>
+        </div>
+        <p class="formula-subnote">Requires required return (r) to be strictly greater than dividend growth rate (g).</p>
+      </div>
+
+      <!-- Model 2: DCF -->
+      <div class="formula-card model-card">
+        <span class="model-badge">DCF</span>
+        <h3 class="model-title">Discounted Cash Flow</h3>
+        <p>Values a company by discounting projected free cash flows plus a terminal value back to the present.</p>
+        <div class="formula-box">
+          P = Σ [ FCF<sub>t</sub> / (1 + WACC)<sup>t</sup> ] + TV
+        </div>
+        <div class="model-legend-grid">
+          <div>
+            <strong>FCF<sub>t</sub></strong>
+            <p>Free cash flow in period t</p>
+          </div>
+          <div>
+            <strong>r</strong>
+            <p>Discount rate (WACC)</p>
+          </div>
+          <div>
+            <strong>TV</strong>
+            <p>Terminal value at horizon</p>
+          </div>
+        </div>
+        <p class="formula-subnote">Used for non-dividend paying companies or when projecting detailed operational forecasts.</p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="content-block">
+      <div class="section-number">3</div>
+      <h2>Valuation Calculator</h2>
+      <p class="section-desc">Estimate intrinsic value using two common methods.</p>
+
+      <div class="two-column-grid">
+        <!-- DDM Calculator -->
+        <div class="calc-box">
+          <span class="calc-section-title">DIVIDEND DISCOUNT MODEL</span>
+          <div class="calc-inputs calc-inputs-stacked">
+            <div class="input-group">
+              <label>Annual Dividend D<sub>1</sub> ($)</label>
+              <input type="text" value="2.50" readonly>
+            </div>
+            <div class="input-group">
+              <label>Required Return r (%)</label>
+              <input type="text" value="10" readonly>
+            </div>
+            <div class="input-group">
+              <label>Growth Rate g (%)</label>
+              <input type="text" value="4" readonly>
+            </div>
+          </div>
+          <div class="calc-result-card">
+            <span class="result-label">Intrinsic Value (DDM)</span>
+            <div class="result-display">$41.67</div>
+          </div>
+        </div>
+
+        <!-- P/E Valuation Calculator -->
+        <div class="calc-box">
+          <span class="calc-section-title">P/E RELATIVE VALUATION</span>
+          <p class="calc-sub-desc">Applies a market multiple to earnings per share; simple & widely used as a framing model.</p>
+          <div class="calc-inputs calc-inputs-stacked">
+            <div class="input-group">
+              <label>Earnings Per Share ($)</label>
+              <input type="text" value="4.00" readonly>
+            </div>
+            <div class="input-group">
+              <label>Target P/E Ratio (x)</label>
+              <input type="text" value="20" readonly>
+            </div>
+          </div>
+          <div class="calc-result-card">
+            <span class="result-label">Implied Price (P/E)</span>
+            <div class="result-display">$80.00</div>
+            <span class="result-formula-text">P/E × EPS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navigation Banner -->
+  <section class="next-module-banner">
+    <div class="container next-module-container">
+      <div>
+        <a href="debt.html" class="prev-link">&larr; Debt</a>
+      </div>
+      <div>
+        <a href="#" class="btn btn-gold">Next: Alternatives →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-square"></span>
+            <span>The Art of Finance</span>
+          </a>
+          <p>A modern approach to understanding financial concepts layer by layer.</p>
+        </div>
+        <div class="footer-links">
+          <a href="overview.html">Finance Overview</a>
+          <a href="tvm.html">Time Value of Money</a>
+          <a href="debt.html">Debt</a>
+          <a href="equity.html">Equity</a>
+          <a href="#">Alternatives</a>
+          <a href="#">Applications</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 The Art of Finance</p>
+        <p>Built for learning</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

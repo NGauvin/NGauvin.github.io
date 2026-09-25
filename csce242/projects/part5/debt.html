@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt: Loans & Bonds - The Art of Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header & Sub-hero -->
+  <div class="hero-wrapper">
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-square"></span>
+          <span>The Art of Finance</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="overview.html">Finance Overview</a></li>
+            <li><a href="tvm.html">Time Value of Money</a></li>
+            <li><a href="debt.html" class="active">Debt</a></li>
+            <li><a href="#">Equity</a></li>
+            <li><a href="#">Alternatives</a></li>
+            <li><a href="#">Applications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Module 03</a> &nbsp;/&nbsp; <span>Core Concept</span>
+        </div>
+        <h1>Debt: Loans<br><span class="highlight-text">&amp; Bonds</span></h1>
+        <p class="hero-subtext">Debt is a promise to repay. Learn how loans work, how bonds are structured, and how to price fixed-income instruments using present value.</p>
+        <p class="prereq-note">&larr; Prereq: Time Value of Money</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Page Content -->
+  <main class="container page-content">
+
+    <!-- Section 1 -->
+    <section class="content-block">
+      <div class="section-number">1</div>
+      <h2>What is Debt?</h2>
+      <p>When an entity — a person, company, or government — needs money, one option is to <strong>borrow it</strong>. In exchange for cash today, they promise to repay the principal, typically with interest over time. This contract is called a <strong>debt instrument</strong>.</p>
+      <p>Debt is the lender's asset and the borrower's liability. The lender earns a return (interest). The borrower gets capital to deploy. Both parties benefit — if the interest rate is priced correctly for the risk.</p>
+
+      <div class="anatomy-box">
+        <span class="anatomy-title">ANATOMY OF A LOAN</span>
+        <div class="anatomy-grid">
+          <div class="anatomy-card">
+            <h4>Principal</h4>
+            <p>The original amount borrowed</p>
+          </div>
+          <div class="anatomy-card">
+            <h4>Interest Rate</h4>
+            <p>The cost of borrowing per period</p>
+          </div>
+          <div class="anatomy-card">
+            <h4>Term</h4>
+            <p>The duration of the loan</p>
+          </div>
+          <div class="anatomy-card">
+            <h4>Amortization</h4>
+            <p>Schedule of principal repayment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="content-block">
+      <div class="section-number">2</div>
+      <h2>Understanding Bonds</h2>
+      <p>A <strong>bond</strong> is a tradable debt instrument. The issuer borrows from investors by selling bonds; investors receive periodic <strong>coupon payments</strong> (interest) and the <strong>face value</strong> (principal) at maturity.</p>
+
+      <!-- Cash Flow Diagram -->
+      <div class="cashflow-box">
+        <span class="cashflow-title">Cash Flow for a 3-year, 5% coupon, $1,000 Bond</span>
+        <div class="cashflow-diagram">
+          <div class="cf-step">
+            <span class="cf-amount negative">-$957</span>
+            <span class="cf-desc">Investment value</span>
+            <div class="cf-pin"></div>
+            <span class="cf-time">Today</span>
+          </div>
+          <div class="cf-step">
+            <span class="cf-amount">+$50</span>
+            <span class="cf-desc">coupon</span>
+            <div class="cf-pin"></div>
+            <span class="cf-time">Year 1</span>
+          </div>
+          <div class="cf-step">
+            <span class="cf-amount">+$50</span>
+            <span class="cf-desc">coupon</span>
+            <div class="cf-pin"></div>
+            <span class="cf-time">Year 2</span>
+          </div>
+          <div class="cf-step">
+            <span class="cf-amount">+$1,050</span>
+            <span class="cf-desc">coupon + principal</span>
+            <div class="cf-pin"></div>
+            <span class="cf-time">Year 3</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonds Table -->
+      <div class="table-responsive">
+        <table class="bonds-table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Issuer</th>
+              <th>Risk</th>
+              <th>Typical Yield</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Government Bond</strong></td>
+              <td>National government</td>
+              <td><span class="badge badge-risk-very-low">Very Low</span></td>
+              <td>3–5%</td>
+            </tr>
+            <tr>
+              <td><strong>Municipal Bond</strong></td>
+              <td>State / local government</td>
+              <td><span class="badge badge-risk-low">Low</span></td>
+              <td>3–4%</td>
+            </tr>
+            <tr>
+              <td><strong>Investment Grade Corp</strong></td>
+              <td>Solid, stable companies</td>
+              <td><span class="badge badge-risk-moderate">Moderate</span></td>
+              <td>4–6%</td>
+            </tr>
+            <tr>
+              <td><strong>High-Yield Bond</strong></td>
+              <td>Speculative companies</td>
+              <td><span class="badge badge-risk-high">High</span></td>
+              <td>7–10%+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="content-block">
+      <div class="section-number">3</div>
+      <h2>Bond Pricing Formula</h2>
+      <p>A bond's price is simply the <strong>present value of all its future cash flows</strong> — the coupon payments plus the face value — discounted at the market yield (YTM).</p>
+
+    <div class="formula-card">
+        <div class="formula-box">
+            P = &Sigma; [ C / (1 + y)<sup>t</sup> ] + F / (1 + y)<sup>n</sup>
+        </div>
+        <p class="formula-subnote">Where C = coupon payment, y = yield to maturity (YTM), F = face value, n = years to maturity</p>
+    </div>
+
+      <div class="callout-card">
+        <h4 class="callout-title">The Price-Yield Relationship</h4>
+        <p>When market interest rates rise, existing bond prices fall — and vice versa. This inverse relationship is one of the most important in fixed income.</p>
+      </div>
+
+      <!-- Bond Pricing Calculator Block -->
+      <div class="calc-box">
+        <span class="calc-section-title">BOND PRICING CALCULATOR</span>
+        
+        <div class="calc-inputs calc-inputs-4col">
+          <div class="input-group">
+            <label>Face Value ($)</label>
+            <input type="text" value="1000" readonly>
+          </div>
+          <div class="input-group">
+            <label>Coupon Rate (%)</label>
+            <input type="text" value="5" readonly>
+          </div>
+          <div class="input-group">
+            <label>YTM (%)</label>
+            <input type="text" value="6.5" readonly>
+          </div>
+          <div class="input-group">
+            <label>Years to Maturity</label>
+            <input type="text" value="3" readonly>
+          </div>
+        </div>
+
+        <div class="calc-result-card bond-result-grid">
+          <div>
+            <span class="result-label">Bond Price</span>
+            <div class="result-display">$957.88</div>
+          </div>
+          <div>
+            <span class="result-label">Annual Coupon</span>
+            <div class="result-display-sm">$50.00</div>
+          </div>
+          <div>
+            <span class="result-label">Status</span>
+            <div class="result-display-sm status-discount">Trading at a Discount</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navigation Banner -->
+  <section class="next-module-banner">
+    <div class="container next-module-container">
+      <div>
+        <a href="tvm.html" class="prev-link">&larr; Time Value of Money</a>
+      </div>
+      <div>
+        <a href="#" class="btn btn-gold">Next: Equity &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-square"></span>
+            <span>The Art of Finance</span>
+          </a>
+          <p>A modern approach to understanding financial concepts layer by layer.</p>
+        </div>
+        <div class="footer-links">
+          <a href="overview.html">Finance Overview</a>
+          <a href="tvm.html">Time Value of Money</a>
+          <a href="debt.html">Debt</a>
+          <a href="#">Equity</a>
+          <a href="#">Alternatives</a>
+          <a href="#">Applications</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Art of Finance</p>
+        <p>Built for learning</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

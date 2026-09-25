@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Value of Money - The Art of Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header & Sub-hero -->
+  <div class="hero-wrapper">
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-square"></span>
+          <span>The Art of Finance</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="overview.html">Finance Overview</a></li>
+            <li><a href="tvm.html" class="active">Time Value of Money</a></li>
+            <li><a href="#">Debt</a></li>
+            <li><a href="#">Equity</a></li>
+            <li><a href="#">Alternatives</a></li>
+            <li><a href="#">Applications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Module 02</a>  /  <span>Core Concept</span>
+        </div>
+        <h1>Time Value<br><span class="highlight-text">of Money</span></h1>
+        <p class="hero-subtext">The single most important concept in all of finance: a dollar received today is worth more than a dollar received in the future.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Page Content -->
+  <main class="container page-content">
+
+    <!-- Section 1 -->
+    <section class="content-block">
+      <div class="section-number">1</div>
+      <h2>Why Does Time Affect Value?</h2>
+      <p class="section-desc">Money has time value for three reasons:</p>
+
+      <div class="card-stack">
+        <div class="info-card">
+          <h4>Opportunity Cost</h4>
+          <p>Money available today can be invested to earn a return, yielding sacrifices that return.</p>
+        </div>
+        <div class="info-card">
+          <h4>Inflation</h4>
+          <p>Prices generally rise over time, eroding the purchasing power of future money.</p>
+        </div>
+        <div class="info-card">
+          <h4>Uncertainty</h4>
+          <p>A payment promised in the future carries risk—it might not materialize. Certain cash now is worth more than uncertain cash later.</p>
+        </div>
+      </div>
+
+      <div class="tvm-chart-box">
+        <span class="chart-title">VALUE OF $1,000 OVER TIME AT 8% ANNUAL RETURN</span>
+        <div class="chart-bars">
+          <div class="chart-col">
+            <span class="bar-val">$1000</span>
+            <div class="bar bar-1"></div>
+            <span class="bar-lbl">Yr 0</span>
+          </div>
+          <div class="chart-col">
+            <span class="bar-val">$1080</span>
+            <div class="bar bar-2"></div>
+            <span class="bar-lbl">Yr 1</span>
+          </div>
+          <div class="chart-col">
+            <span class="bar-val">$1166</span>
+            <div class="bar bar-3"></div>
+            <span class="bar-lbl">Yr 2</span>
+          </div>
+          <div class="chart-col">
+            <span class="bar-val">$1260</span>
+            <div class="bar bar-3-5"></div>
+            <span class="bar-lbl">Yr 3</span>
+          </div>
+          <div class="chart-col">
+            <span class="bar-val">$1360</span>
+            <div class="bar bar-4"></div>
+            <span class="bar-lbl">Yr 4</span>
+          </div>
+          <div class="chart-col">
+            <span class="bar-val">$1469</span>
+            <div class="bar bar-5"></div>
+            <span class="bar-lbl">Yr 5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="content-block">
+      <div class="section-number">2</div>
+      <h2>The Core Formulas</h2>
+
+      <div class="two-column-grid">
+        <div class="formula-card">
+          <span class="formula-badge">Future Value</span>
+          <div class="formula-box">
+            FV = PV &times; (1 + r)<sup>n</sup>
+          </div>
+          <p>Given a present sum PV, grown at r rate for n periods, how much will it be worth in the future?</p>
+          <ul class="formula-legend">
+            <li><strong>PV</strong> = Present Value (starting amount)</li>
+            <li><strong>r</strong> = Interest rate per period</li>
+            <li><strong>n</strong> = Number of periods</li>
+          </ul>
+        </div>
+
+        <div class="formula-card">
+          <span class="formula-badge">Present Value</span>
+          <div class="formula-box">
+            PV = FV / (1 + r)<sup>n</sup>
+          </div>
+          <p>Given a future sum FV, what is it worth today at rate r? This is called discounting.</p>
+          <ul class="formula-legend">
+            <li><strong>FV</strong> = Future Value (future amount)</li>
+            <li><strong>r</strong> = Discount rate</li>
+            <li><strong>n</strong> = Number of periods</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="formula-card wide-card">
+        <h3>Net Present Value (NPV)</h3>
+        <p>Most investments produce a series of cash flows over time. NPV sums the present value of all future cash flows and subtracts the initial investment.</p>
+        <div class="formula-box">
+          NPV = &Sigma; [ CF<sub>t</sub> / (1 + r)<sup>t</sup> ] &minus; C<sub>0</sub>
+        </div>
+        <p class="formula-subnote">Where CF<sub>t</sub> = Cash flow at time t, r = Discount rate, C<sub>0</sub> = Initial investment</p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="content-block">
+      <div class="section-number">3</div>
+      <h2>Interactive Calculator</h2>
+      <p class="section-desc">Explore how time, rate, and principal interact.</p>
+
+      <div class="calc-box">
+        <div class="calc-tabs">
+          <button class="calc-tab active">Compute Future Value</button>
+          <button class="calc-tab">Compute Present Value</button>
+        </div>
+
+        <div class="calc-inputs">
+          <div class="input-group">
+            <label>Present Value ($)</label>
+            <input type="text" value="1000" readonly>
+          </div>
+          <div class="input-group">
+            <label>Annual Rate (%)</label>
+            <input type="text" value="8" readonly>
+          </div>
+          <div class="input-group">
+            <label>Years (n)</label>
+            <input type="text" value="5" readonly>
+          </div>
+        </div>
+
+        <div class="calc-result-card">
+          <div class="result-display">$1,469.33</div>
+          <div class="result-meta">
+            <span>Rate: 8% per yr</span>
+            <span>Period: 5 yrs</span>
+            <span>FV = 1000 &times; (1 + 0.08)<sup>5</sup></span>
+          </div>
+        </div>
+
+        <div class="calc-timeline">
+          <div class="timeline-node"><span class="node-yr">0</span></div>
+          <div class="timeline-node"><span class="node-yr">1</span></div>
+          <div class="timeline-node"><span class="node-yr">2</span></div>
+          <div class="timeline-node"><span class="node-yr">3</span></div>
+          <div class="timeline-node"><span class="node-yr">4</span></div>
+          <div class="timeline-node"><span class="node-yr">5</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navigation Banner -->
+  <section class="next-module-banner">
+    <div class="container next-module-container">
+      <div>
+        <a href="overview.html" class="prev-link">&larr; Finance Overview</a>
+      </div>
+      <div>
+        <a href="#" class="btn btn-gold">Next: Debt &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-square"></span>
+            <span>The Art of Finance</span>
+          </a>
+          <p>A modern approach to understanding financial concepts layer by layer.</p>
+        </div>
+        <div class="footer-links">
+          <a href="overview.html">Finance Overview</a>
+          <a href="tvm.html">Time Value of Money</a>
+          <a href="#">Debt</a>
+          <a href="#">Equity</a>
+          <a href="#">Alternatives</a>
+          <a href="#">Applications</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Art of Finance</p>
+        <p>Built for learning</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

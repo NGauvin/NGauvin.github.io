@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternative Investments - The Art of Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header & Sub-hero -->
+  <div class="hero-wrapper">
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-square"></span>
+          <span>The Art of Finance</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="overview.html">Finance Overview</a></li>
+            <li><a href="tvm.html">Time Value of Money</a></li>
+            <li><a href="debt.html">Debt</a></li>
+            <li><a href="equity.html">Equity</a></li>
+            <li><a href="alternatives.html" class="active">Alternatives</a></li>
+            <li><a href="applications.html">Applications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Module 05</a>  /  <span>Advanced</span>
+        </div>
+        <h1>Alternative<br><span class="highlight-text">Investments</span></h1>
+        <p class="hero-subtext">Beyond stocks and bonds lies a rich set of asset classes — real estate, commodities, private equity, and more. Explore their role in a diversified portfolio.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Page Content -->
+  <main class="container page-content">
+
+    <!-- Section 1: Why Alternatives? -->
+    <section class="content-block">
+      <div class="section-number">1</div>
+      <h2>Why Alternatives?</h2>
+      <p>Traditional portfolios of stocks and bonds are exposed to the same economic forces — recessions, interest rate shifts, and market sentiment. <strong>Alternative investments</strong> often have lower correlation to traditional assets, providing true diversification.</p>
+
+      <!-- Diversification Formula Box -->
+      <div class="formula-card model-card">
+        <span class="model-badge">THE DIVERSIFICATION PRINCIPLE</span>
+        <div class="formula-box">
+          σ<sup>2</sup><sub>portfolio</sub> = Σ Σ w<sub>i</sub> w<sub>j</sub> σ<sub>i</sub> σ<sub>j</sub> ρ<sub>ij</sub>
+        </div>
+        <p class="formula-subnote">Portfolio variance depends on the <strong>correlation (ρ)</strong> between assets. When ρ < 1, combining assets reduces total risk without proportionally reducing expected return. This is the mathematical foundation of diversification.</p>
+      </div>
+
+      <!-- Correlation Matrix Table -->
+      <div class="table-responsive">
+        <table class="equity-table correlation-table">
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Stocks</th>
+              <th>Bonds</th>
+              <th>Real Estate</th>
+              <th>Gold</th>
+              <th>Crypto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stocks</strong></td>
+              <td>1.00</td>
+              <td class="highlight-neg">-0.10</td>
+              <td>0.58</td>
+              <td>0.08</td>
+              <td>0.38</td>
+            </tr>
+            <tr>
+              <td><strong>Bonds</strong></td>
+              <td class="highlight-neg">-0.10</td>
+              <td>1.00</td>
+              <td>0.12</td>
+              <td>0.28</td>
+              <td class="highlight-neg">-0.05</td>
+            </tr>
+            <tr>
+              <td><strong>Real Estate</strong></td>
+              <td>0.58</td>
+              <td>0.12</td>
+              <td>1.00</td>
+              <td>0.18</td>
+              <td>0.22</td>
+            </tr>
+            <tr>
+              <td><strong>Gold</strong></td>
+              <td>0.08</td>
+              <td>0.28</td>
+              <td>0.18</td>
+              <td>1.00</td>
+              <td>0.15</td>
+            </tr>
+            <tr>
+              <td><strong>Crypto</strong></td>
+              <td>0.38</td>
+              <td class="highlight-neg">-0.05</td>
+              <td>0.22</td>
+              <td>0.15</td>
+              <td>1.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-subnote">Approximate historical correlations (illustrative). Values closer to 0 or negative indicate higher diversification.</p>
+    </section>
+
+    <!-- Section 2: Alternative Asset Classes -->
+    <section class="content-block">
+      <div class="section-number">2</div>
+      <h2>Alternative Asset Classes</h2>
+
+      <div class="asset-cards-grid">
+        <!-- Real Estate -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <h3>Real Estate</h3>
+            <span class="asset-tag">MODERATE RISK</span>
+          </div>
+          <span class="asset-category">Real Assets</span>
+          <p>Physical property — residential, commercial, industrial. Returns come from rental income and price appreciation.</p>
+          <div class="asset-card-footer">
+            <div>
+              <span class="metric-label">Typical Return</span>
+              <span class="metric-value">6–10%</span>
+            </div>
+            <div>
+              <span class="metric-label">Liquidity</span>
+              <span class="metric-value">Low</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commodities -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <h3>Commodities</h3>
+            <span class="asset-tag">HIGH RISK</span>
+          </div>
+          <span class="asset-category">Raw Assets</span>
+          <p>Raw materials — oil, gold, agricultural products. Driven by supply/demand and macroeconomic conditions.</p>
+          <div class="asset-card-footer">
+            <div>
+              <span class="metric-label">Typical Return</span>
+              <span class="metric-value">3–8%</span>
+            </div>
+            <div>
+              <span class="metric-label">Liquidity</span>
+              <span class="metric-value">High</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Private Equity -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <h3>Private Equity</h3>
+            <span class="asset-tag">HIGH RISK</span>
+          </div>
+          <span class="asset-category">Private Markets</span>
+          <p>Investment in private companies. Higher return potential than public markets, but capital is locked up 10+ years.</p>
+          <div class="asset-card-footer">
+            <div>
+              <span class="metric-label">Typical Return</span>
+              <span class="metric-value">12–18%</span>
+            </div>
+            <div>
+              <span class="metric-label">Liquidity</span>
+              <span class="metric-value">Very Low</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hedge Funds -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <h3>Hedge Funds</h3>
+            <span class="asset-tag">VARIABLE RISK</span>
+          </div>
+          <span class="asset-category">Alternative Strategy</span>
+          <p>Pooled investment funds using sophisticated strategies — long/short, arbitrage, macro — to generate absolute returns.</p>
+          <div class="asset-card-footer">
+            <div>
+              <span class="metric-label">Typical Return</span>
+              <span class="metric-value">6–12%</span>
+            </div>
+            <div>
+              <span class="metric-label">Liquidity</span>
+              <span class="metric-value">Low</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crypto / Assets -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <h3>Crypto / Assets</h3>
+            <span class="asset-tag">VERY HIGH RISK</span>
+          </div>
+          <span class="asset-category">Digital Assets</span>
+          <p>Decentralized digital assets. High volatility, speculative in nature. Emerging asset class with evolving regulatory environment.</p>
+          <div class="asset-card-footer">
+            <div>
+              <span class="metric-label">Typical Return</span>
+              <span class="metric-value">Highly Variable</span>
+            </div>
+            <div>
+              <span class="metric-label">Liquidity</span>
+              <span class="metric-value">High</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Portfolio Allocation Explorer -->
+    <section class="content-block">
+      <div class="section-number">3</div>
+      <h2>Portfolio Allocation Explorer</h2>
+      <p class="section-desc">Compare three common allocation strategies and their risk/return profiles.</p>
+
+      <div class="allocation-explorer">
+        <!-- Toggle Buttons -->
+        <div class="allocation-toggle-group">
+          <button class="alloc-btn">Conservative</button>
+          <button class="alloc-btn active">Balanced</button>
+          <button class="alloc-btn">Aggressive</button>
+        </div>
+
+        <!-- Allocation Visualizer Box -->
+        <div class="alloc-card">
+          <!-- Stacked Bar Chart -->
+          <div class="alloc-bar-wrapper">
+            <div class="alloc-bar-segment segment-stocks" style="width: 50%;">50% Stocks</div>
+            <div class="alloc-bar-segment segment-bonds" style="width: 35%;">35% Bonds</div>
+            <div class="alloc-bar-segment segment-alts" style="width: 15%;">15% Alts</div>
+          </div>
+
+          <!-- Metrics Footer -->
+          <div class="alloc-metrics-grid">
+            <div class="alloc-metric">
+              <span class="metric-label">Expected Return</span>
+              <span class="metric-large-val">7.1%</span>
+            </div>
+            <div class="alloc-metric">
+              <span class="metric-label">Risk Level</span>
+              <span class="metric-large-val">Moderate</span>
+            </div>
+            <div class="alloc-metric">
+              <span class="metric-label">Sharpe Ratio</span>
+              <span class="metric-large-val">1.14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navigation Banner -->
+  <section class="next-module-banner">
+    <div class="container next-module-container">
+      <div>
+        <a href="equity.html" class="prev-link">&larr; Equity</a>
+      </div>
+      <div>
+        <a href="applications.html" class="btn btn-gold">Next: Applications &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-square"></span>
+            <span>The Art of Finance</span>
+          </a>
+          <p>A first-principles approach to understanding finance, built layer by layer.</p>
+        </div>
+        <div class="footer-links">
+          <a href="overview.html">Finance Overview</a>
+          <a href="tvm.html">Time Value of Money</a>
+          <a href="debt.html">Debt</a>
+          <a href="equity.html">Equity</a>
+          <a href="alternatives.html">Alternatives</a>
+          <a href="applications.html">Applications</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Educational Version (Demo)</p>
+        <p>&copy; 2026 The Art of Finance</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

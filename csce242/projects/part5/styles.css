@@ -1845,3 +1845,330 @@ ul {
   color: var(--text-main, #111827);
   margin-top: 0.25rem;
 }
+
+/* Applications in Practice Page Styles */
+
+/* Section 1: Module Cards Grid */
+.module-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.module-card-item {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.module-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted, #9ca3af);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.module-card-item h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.module-card-item p {
+  font-size: 0.825rem;
+  color: var(--text-muted, #6b7280);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Section 2: Framework Tabs Layout */
+.framework-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .framework-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.framework-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.framework-tab {
+  background: transparent;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main, #374151);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.framework-tab.active {
+  background-color: var(--theme-dark-green, #1b4332);
+  color: #ffffff;
+  border-color: var(--theme-dark-green, #1b4332);
+}
+
+.framework-content-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.step-title {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.step-questions {
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.step-questions li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-main, #374151);
+  line-height: 1.5;
+}
+
+.key-tools-box {
+  background-color: #f4f8f5;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+
+.tools-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--theme-dark-green, #1b4332);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.key-tools-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-main, #374151);
+}
+
+/* Section 3: Worked Example Card */
+.example-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #6b7280);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.company-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.data-point {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.data-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted, #6b7280);
+  margin-bottom: 0.25rem;
+}
+
+.data-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main, #111827);
+}
+
+/* Valuation Bars */
+.valuation-bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bar-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.bar-title {
+  font-size: 0.95rem;
+  color: var(--text-main, #111827);
+}
+
+.bar-value {
+  font-size: 0.95rem;
+  color: var(--text-main, #111827);
+}
+
+.bar-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted, #6b7280);
+  margin-bottom: 0.5rem;
+}
+
+.bar-track {
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: var(--theme-dark-green, #1b4332);
+  border-radius: 4px;
+}
+
+/* Valuation Summary Dark Banner */
+.valuation-summary-card {
+  background-color: var(--theme-dark-green, #1b4332);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 1.75rem;
+}
+
+.summary-card-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #a3b18a;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.summary-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-metric .metric-label {
+  color: #d8f3dc;
+}
+
+.summary-metric .metric-large-val {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.25rem;
+}
+
+.summary-metric .text-neg {
+  color: #f87171;
+}
+
+.summary-conclusion {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e5e7eb;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1rem;
+}
+
+/* Journey Complete Block */
+.journey-complete-block {
+  text-align: center;
+  background-color: #f0f7f4;
+  border-radius: 12px;
+  padding: 3.5rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.star-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--theme-dark-green, #1b4332);
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.journey-complete-block h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.journey-complete-block p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main, #374151);
+}
+
+.journey-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-secondary {
+  background-color: var(--theme-dark-green, #1b4332);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--theme-dark-green, #1b4332);
+  color: var(--theme-dark-green, #1b4332);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}

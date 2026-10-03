@@ -2125,6 +2125,11 @@ ul {
   padding-top: 1rem;
 }
 
+/* Overrides .content-block p so the summary text is light on the dark card */
+.valuation-summary-card .summary-conclusion {
+  color: #e5e7eb;
+}
+
 /* Journey Complete Block */
 .journey-complete-block {
   text-align: center;

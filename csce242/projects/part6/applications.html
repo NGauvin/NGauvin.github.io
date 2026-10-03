@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applications in Practice - The Art of Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header & Sub-hero -->
+  <div class="hero-wrapper">
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-square"></span>
+          <span>The Art of Finance</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="overview.html">Finance Overview</a></li>
+            <li><a href="tvm.html">Time Value of Money</a></li>
+            <li><a href="debt.html">Debt</a></li>
+            <li><a href="equity.html">Equity</a></li>
+            <li><a href="alternatives.html">Alternatives</a></li>
+            <li><a href="applications.html" class="active">Applications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sub-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Module 06</a>  /  <span>Capstone</span>
+        </div>
+        <h1>Applications<br><span class="highlight-text">in Practice</span></h1>
+        <p class="hero-subtext">Everything you have learned now comes together. Here we apply first-principles thinking to evaluate a real investment from scratch — the way a professional analyst would.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Page Content -->
+  <main class="container page-content">
+
+    <!-- Section 1: What You Have Built -->
+    <section class="content-block">
+      <div class="section-number">1</div>
+      <h2>What You Have Built</h2>
+
+      <div class="module-cards-grid">
+        <div class="module-card-item">
+          <span class="module-num">01</span>
+          <h3>Finance Overview</h3>
+          <p>Markets, capital flows, the role of finance</p>
+        </div>
+
+        <div class="module-card-item">
+          <span class="module-num">02</span>
+          <h3>Time Value of Money</h3>
+          <p>PV, FV, discounting, NPV</p>
+        </div>
+
+        <div class="module-card-item">
+          <span class="module-num">03</span>
+          <h3>Debt</h3>
+          <p>Bonds, yield, fixed-income pricing</p>
+        </div>
+
+        <div class="module-card-item">
+          <span class="module-num">04</span>
+          <h3>Equity</h3>
+          <p>Stocks, DDM, DCF, P/E valuation</p>
+        </div>
+
+        <div class="module-card-item">
+          <span class="module-num">05</span>
+          <h3>Alternatives</h3>
+          <p>Diversification, correlation matrix, asset classes</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: A 5-Step Investment Framework -->
+    <section class="content-block">
+      <div class="section-number">2</div>
+      <h2>A 5-Step Investment Framework</h2>
+      <p class="section-desc">Professional investors follow a structured process. Click each step to explore it.</p>
+
+      <div class="framework-container">
+        <!-- Tab Navigation -->
+        <div class="framework-tabs">
+          <button class="framework-tab active" data-tab="step-1">1. Understand the Business</button>
+          <button class="framework-tab" data-tab="step-2">2. Assess the Competitive Position</button>
+          <button class="framework-tab" data-tab="step-3">3. Analyze the Financials</button>
+          <button class="framework-tab" data-tab="step-4">4. Value the Investment</button>
+          <button class="framework-tab" data-tab="step-5">5. Make a Decision</button>
+        </div>
+
+        <!-- Tab Content Box -->
+        <div class="framework-content-card">
+          <h3 class="step-title">1. Understand the Business</h3>
+          <ol class="step-questions">
+            <li>What does the company do — what product or service does it sell?</li>
+            <li>Who are its customers, and what is the addressable market?</li>
+            <li>What are the key drivers of revenue and cost?</li>
+          </ol>
+
+          <div class="key-tools-box">
+            <span class="tools-title">Key Tools:</span>
+            <p>Annual reports, 10-K filings, industry research</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Worked Example: StableCo Inc. -->
+    <section class="content-block">
+      <div class="section-number">3</div>
+      <h2>Worked Example: StableCo Inc.</h2>
+      <p class="section-desc">A fictional mature consumer staples company with steady cash flows and a 20-year dividend history.</p>
+
+      <div class="example-card">
+        <span class="card-subtitle">COMPANY DATA</span>
+        
+        <!-- 6 Metrics Grid -->
+        <div class="company-data-grid">
+          <div class="data-point">
+            <span class="data-label">Annual Dividend D<sub>1</sub></span>
+            <span class="data-val">$3.20</span>
+          </div>
+          <div class="data-point">
+            <span class="data-label">Dividend Growth Rate</span>
+            <span class="data-val">5% / yr</span>
+          </div>
+          <div class="data-point">
+            <span class="data-label">Required Return</span>
+            <span class="data-val">10%</span>
+          </div>
+          <div class="data-point">
+            <span class="data-label">Current P/E</span>
+            <span class="data-val">18&times;</span>
+          </div>
+          <div class="data-point">
+            <span class="data-label">EPS (ttm)</span>
+            <span class="data-val">$6.40</span>
+          </div>
+          <div class="data-point">
+            <span class="data-label">Net Debt / EBITDA</span>
+            <span class="data-val">1.8&times;</span>
+          </div>
+        </div>
+
+        <!-- Valuation Progress / Comparison Bars -->
+        <div class="valuation-bars-container">
+          <div class="bar-group">
+            <div class="bar-header">
+              <span class="bar-title">DDM Valuation</span>
+              <span class="bar-value">$64.00</span>
+            </div>
+            <span class="bar-sub">P = $3.20 / (0.10 &minus; 0.05)</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: 58%;"></div>
+            </div>
+          </div>
+
+          <div class="bar-group">
+            <div class="bar-header">
+              <span class="bar-title">P/E Valuation</span>
+              <span class="bar-value">$115.20</span>
+            </div>
+            <span class="bar-sub">P/E 18&times; &times; $6.40</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valuation Summary Banner -->
+        <div class="valuation-summary-card">
+          <span class="summary-card-title">VALUATION SUMMARY</span>
+          <div class="summary-metrics-grid">
+            <div class="summary-metric">
+              <span class="metric-label">Average Intrinsic Value</span>
+              <span class="metric-large-val">$89.60</span>
+            </div>
+            <div class="summary-metric">
+              <span class="metric-label">Current Market Price</span>
+              <span class="metric-large-val">$110.00</span>
+            </div>
+            <div class="summary-metric">
+              <span class="metric-label">Margin of Safety</span>
+              <span class="metric-large-val text-neg">-22.8%</span>
+            </div>
+          </div>
+          <p class="summary-conclusion">At $110.00, StableCo appears to be trading above our estimated intrinsic value. There is no margin of safety at this price — a buyer is either paying a premium for quality or the assumptions need revisiting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey Complete Section -->
+    <section class="journey-complete-block">
+      <div class="star-icon">&#9733;</div>
+      <h2>Journey Complete</h2>
+      <p>You have gone from first principles — what money is and why time affects its value — all the way to evaluating a real investment like a professional analyst. Finance is a craft, and you now have the foundation to keep building.</p>
+      <div class="journey-cta-group">
+        <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        <a href="overview.html" class="btn btn-outline">Review from Start</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navigation Banner -->
+  <section class="next-module-banner">
+    <div class="container next-module-container">
+      <div>
+        <a href="alternatives.html" class="prev-link">&larr; Alternatives</a>
+      </div>
+      <div>
+        <a href="index.html" class="btn btn-gold">Home &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-square"></span>
+            <span>The Art of Finance</span>
+          </a>
+          <p>A first-principles approach to understanding finance, built layer by layer.</p>
+        </div>
+        <div class="footer-links">
+          <a href="overview.html">Finance Overview</a>
+          <a href="tvm.html">Time Value of Money</a>
+          <a href="debt.html">Debt</a>
+          <a href="equity.html">Equity</a>
+          <a href="alternatives.html">Alternatives</a>
+          <a href="applications.html">Applications</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Educational Version (Demo)</p>
+        <p>&copy; 2026 The Art of Finance</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

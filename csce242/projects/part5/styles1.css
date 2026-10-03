@@ -656,7 +656,7 @@ ul {
 }
 
 .domain-card li::before {
-  content: "•";
+  content: "â€¢";
   color: var(--accent-tag-text);
   position: absolute;
   left: 0;
@@ -702,7 +702,7 @@ ul {
 }
 
 .accordion-item[open] summary::after {
-  content: "−";
+  content: "âˆ’";
 }
 
 .accordion-item p {

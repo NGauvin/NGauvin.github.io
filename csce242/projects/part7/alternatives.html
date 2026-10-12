@@ -38,7 +38,7 @@
     <section class="sub-hero">
       <div class="container">
         <div class="breadcrumbs">
-          <a href="index.html">Module 05</a>  /  <span>Advanced</span>
+          <a href="index.html">Module 05</a>  /  <span>Advanced</span>
         </div>
         <h1>Alternative<br><span class="highlight-text">Investments</span></h1>
         <p class="hero-subtext">Beyond stocks and bonds lies a rich set of asset classes — real estate, commodities, private equity, and more. Explore their role in a diversified portfolio.</p>
@@ -124,131 +124,13 @@
       <p class="table-subnote">Approximate historical correlations (illustrative). Values closer to 0 or negative indicate higher diversification.</p>
     </section>
 
-    <!-- Section 2: Alternative Asset Classes -->
+    <!-- Section 2: Alternative Asset Classes (cards built by scripts/alternatives.js from JSON) -->
     <section class="content-block">
       <div class="section-number">2</div>
       <h2>Alternative Asset Classes</h2>
 
-      <div class="asset-cards-grid">
-        <!-- Real Estate -->
-        <div class="asset-card">
-          <div class="asset-card-header">
-            <h3>Real Estate</h3>
-            <span class="asset-tag">MODERATE RISK</span>
-          </div>
-          <span class="asset-category">Real Assets</span>
-          <p>Physical property — residential, commercial, industrial. Returns come from rental income and price appreciation.</p>
-          <div class="asset-card-footer">
-            <div>
-              <span class="metric-label">Typical Return</span>
-              <span class="metric-value">6–10%</span>
-            </div>
-            <div>
-              <span class="metric-label">Liquidity</span>
-              <span class="metric-value">Low</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Commodities -->
-        <div class="asset-card">
-          <div class="asset-card-header">
-            <h3>Commodities</h3>
-            <span class="asset-tag">HIGH RISK</span>
-          </div>
-          <span class="asset-category">Raw Assets</span>
-          <p>Raw materials — oil, gold, agricultural products. Driven by supply/demand and macroeconomic conditions.</p>
-          <div class="asset-card-footer">
-            <div>
-              <span class="metric-label">Typical Return</span>
-              <span class="metric-value">3–8%</span>
-            </div>
-            <div>
-              <span class="metric-label">Liquidity</span>
-              <span class="metric-value">High</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Private Equity -->
-        <div class="asset-card">
-          <div class="asset-card-header">
-            <h3>Private Equity</h3>
-            <span class="asset-tag">HIGH RISK</span>
-          </div>
-          <span class="asset-category">Private Markets</span>
-          <p>Investment in private companies. Higher return potential than public markets, but capital is locked up 10+ years.</p>
-          <div class="asset-card-footer">
-            <div>
-              <span class="metric-label">Typical Return</span>
-              <span class="metric-value">12–18%</span>
-            </div>
-            <div>
-              <span class="metric-label">Liquidity</span>
-              <span class="metric-value">Very Low</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Hedge Funds -->
-        <div class="asset-card">
-          <div class="asset-card-header">
-            <h3>Hedge Funds</h3>
-            <span class="asset-tag">VARIABLE RISK</span>
-          </div>
-          <span class="asset-category">Alternative Strategy</span>
-          <p>Pooled investment funds using sophisticated strategies — long/short, arbitrage, macro — to generate absolute returns.</p>
-          <div class="asset-card-footer">
-            <div>
-              <span class="metric-label">Typical Return</span>
-              <span class="metric-value">6–12%</span>
-            </div>
-            <div>
-              <span class="metric-label">Liquidity</span>
-              <span class="metric-value">Low</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Crypto / Assets -->
-        <div class="asset-card">
-          <div class="asset-card-header">
-            <h3>Crypto / Assets</h3>
-            <span class="asset-tag">VERY HIGH RISK</span>
-          </div>
-          <span class="asset-category">Digital Assets</span>
-          <p>Decentralized digital assets. High volatility, speculative in nature. Emerging asset class with evolving regulatory environment.</p>
-          <div class="asset-card-footer">
-            <div>
-              <span class="metric-label">Typical Return</span>
-              <span class="metric-value">Highly Variable</span>
-            </div>
-            <div>
-              <span class="metric-label">Liquidity</span>
-              <span class="metric-value">High</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Private Credit -->
-        <div class="asset-card">
-          <div class="asset-card-header">
-            <h3>Private Credit</h3>
-            <span class="asset-tag">MODERATE RISK</span>
-          </div>
-          <span class="asset-category">Direct Lending</span>
-          <p>Loans made directly to companies by non-bank lenders. Often floating-rate with higher yields than public bonds, in exchange for lower liquidity.</p>
-          <div class="asset-card-footer">
-            <div>
-              <span class="metric-label">Typical Return</span>
-              <span class="metric-value">8–12%</span>
-            </div>
-            <div>
-              <span class="metric-label">Liquidity</span>
-              <span class="metric-value">Very Low</span>
-            </div>
-          </div>
-        </div>
+      <div class="asset-cards-grid" id="asset-cards" aria-live="polite">
+        <p class="asset-status">Loading asset classes...</p>
       </div>
     </section>
 
@@ -336,5 +218,6 @@
   </footer>
 
   <script src="scripts/main.js"></script>
+  <script src="scripts/alternatives.js"></script>
 </body>
 </html>

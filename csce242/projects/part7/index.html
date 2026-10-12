@@ -192,6 +192,42 @@
     </div>
   </section>
 
+  <!-- Contact Me -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="curriculum-header">
+        <span class="section-badge">CONTACT</span>
+        <h2>Contact Me</h2>
+        <p class="section-subtitle">Questions about a module or ideas for the site? Send me a message.</p>
+      </div>
+
+            <div class="contact-columns">
+        <form id="contact-form" class="contact-form">
+          <input type="hidden" name="access_key" value="7aae9964-dd62-4c5d-93c7-9391861b3161">
+          <input type="hidden" name="subject" value="Contact from The Art of Finance">
+          <input type="hidden" name="from_name" value="The Art of Finance">
+
+          <p>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="First and last" required minlength="2">
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required minlength="10"></textarea>
+          </p>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-gold">Send Message</button>
+            <p id="result" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -219,5 +255,6 @@
   </footer>
 
   <script src="scripts/main.js"></script>
+  <script src="scripts/contact.js"></script>
 </body>
 </html>

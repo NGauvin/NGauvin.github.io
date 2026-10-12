@@ -1,0 +1,82 @@
+[
+  {
+    "_id": 1,
+    "name": "Real Estate",
+    "img_name": "images/real-estate.jpg",
+    "category": "Real Assets",
+    "risk": "Moderate",
+    "typical_return": "6-10%",
+    "liquidity": "Low",
+    "description": "Physical property such as residential, commercial, and industrial buildings. Returns come from rental income and price appreciation."
+  },
+  {
+    "_id": 2,
+    "name": "Commodities",
+    "img_name": "images/commodities.jpg",
+    "category": "Raw Assets",
+    "risk": "High",
+    "typical_return": "3-8%",
+    "liquidity": "High",
+    "description": "Raw materials like oil, gold, and agricultural products. Prices are driven by supply, demand, and the broader economy."
+  },
+  {
+    "_id": 3,
+    "name": "Private Equity",
+    "img_name": "images/private-equity.jpg",
+    "category": "Private Markets",
+    "risk": "High",
+    "typical_return": "12-18%",
+    "liquidity": "Very Low",
+    "description": "Investment in private companies. Higher return potential than public markets, but capital is often locked up for 10 years or more."
+  },
+  {
+    "_id": 4,
+    "name": "Hedge Funds",
+    "img_name": "images/hedge-funds.jpg",
+    "category": "Alternative Strategy",
+    "risk": "Variable",
+    "typical_return": "6-12%",
+    "liquidity": "Low",
+    "description": "Pooled funds that use strategies like long/short, arbitrage, and global macro to try to earn returns in any market."
+  },
+  {
+    "_id": 5,
+    "name": "Digital Assets",
+    "img_name": "images/digital-assets.jpg",
+    "category": "Cryptocurrency",
+    "risk": "Very High",
+    "typical_return": "Highly Variable",
+    "liquidity": "High",
+    "description": "Decentralized digital currencies and tokens. Prices are volatile and speculative, and the rules around them are still changing."
+  },
+  {
+    "_id": 6,
+    "name": "Private Credit",
+    "img_name": "images/private-credit.jpg",
+    "category": "Direct Lending",
+    "risk": "Moderate",
+    "typical_return": "8-12%",
+    "liquidity": "Very Low",
+    "description": "Loans made directly to companies by lenders that are not banks. They often pay higher yields than public bonds in exchange for less liquidity."
+  },
+  {
+    "_id": 7,
+    "name": "Infrastructure",
+    "img_name": "images/infrastructure.jpg",
+    "category": "Real Assets",
+    "risk": "Low to Moderate",
+    "typical_return": "5-9%",
+    "liquidity": "Low",
+    "description": "Essential assets like toll roads, utilities, pipelines, and airports. Revenue is often set by contracts or regulation and tends to rise with inflation."
+  },
+  {
+    "_id": 8,
+    "name": "Collectibles & Art",
+    "img_name": "images/collectibles-art.jpg",
+    "category": "Passion Assets",
+    "risk": "High",
+    "typical_return": "Highly Variable",
+    "liquidity": "Very Low",
+    "description": "Fine art, rare wine, classic cars, and other collectibles. They produce no income, so returns depend on what a buyer will pay later."
+  }
+]

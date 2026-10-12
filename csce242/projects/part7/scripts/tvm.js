@@ -1,144 +1,94 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const box = document.querySelector('.calc-box');
-  if (!box) return;
+let mode = "fv";
 
-  const tabs = box.querySelectorAll('.calc-tab');
-  const groups = box.querySelectorAll('.calc-inputs .input-group');
-  const resultEl = box.querySelector('.result-display');
-  const metaSpans = box.querySelectorAll('.result-meta span');
-  const timeline = box.querySelector('.calc-timeline');
-
-  if (tabs.length < 2 || groups.length < 3 || !resultEl || metaSpans.length < 3) return;
-
-  const amountLabel = groups[0].querySelector('label');
-  const amountInput = groups[0].querySelector('input');
-  const rateInput = groups[1].querySelector('input');
-  const yearsInput = groups[2].querySelector('input');
-
-  let mode = 'fv'; // 'fv' = compute future value, 'pv' = compute present value
-
-  const currency = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-  const plain = (maxDecimals) => new Intl.NumberFormat('en-US', {
-    useGrouping: false,
-    maximumFractionDigits: maxDecimals
-  });
-  const fmtAmount = plain(2);
-  const fmtRate = plain(4);
-  const fmtDecimalRate = plain(6);
-  const fmtYears = plain(2);
-
-  resultEl.setAttribute('aria-live', 'polite');
-
-  // Accepts things like "1,000" or "$1000"; returns NaN for anything else
-  function parse(input) {
-    const cleaned = input.value.replace(/[$,%\s]/g, '');
-    if (cleaned === '' || cleaned === '-' || cleaned === '.') return NaN;
-    return Number(cleaned);
-  }
-
-  function setMeta(rateText, periodText, formulaParts) {
-    metaSpans[0].textContent = rateText;
-    metaSpans[1].textContent = periodText;
-    const formula = metaSpans[2];
-    formula.textContent = '';
-    if (!formulaParts) return;
-    formula.append(formulaParts.before);
-    const sup = document.createElement('sup');
-    sup.textContent = formulaParts.exponent;
-    formula.append(sup);
-  }
-
-  function renderTimeline(years) {
-    if (!timeline) return;
-    timeline.textContent = '';
-
-    let labels = [];
-    if (Number.isFinite(years) && years >= 0) {
-      if (Number.isInteger(years) && years <= 10) {
-        for (let i = 0; i <= years; i++) labels.push(i);
-      } else {
-        // Too many points to show; use 6 evenly spaced ones from 0 to n
-        for (let i = 0; i < 6; i++) labels.push(Math.round((years * i / 5) * 100) / 100);
-      }
-    }
-
-    labels.forEach((label) => {
-      const node = document.createElement('div');
-      node.className = 'timeline-node';
-      const yr = document.createElement('span');
-      yr.className = 'node-yr';
-      yr.textContent = fmtYears.format(label);
-      node.appendChild(yr);
-      timeline.appendChild(node);
-    });
-  }
-
-  function showInvalid() {
-    resultEl.textContent = '—';
-    setMeta('Rate: —', 'Period: —', null);
-    renderTimeline(NaN);
-  }
-
-  function calculate() {
-    const amount = parse(amountInput);
-    const ratePct = parse(rateInput);
-    const years = parse(yearsInput);
-
-    const valid =
-      Number.isFinite(amount) &&
-      Number.isFinite(ratePct) && ratePct > -100 &&
-      Number.isFinite(years) && years >= 0;
-
-    if (!valid) {
-      showInvalid();
-      return;
-    }
-
-    const r = ratePct / 100;
-    const factor = Math.pow(1 + r, years);
-    const result = mode === 'fv' ? amount * factor : amount / factor;
-
-    if (!Number.isFinite(result)) {
-      resultEl.textContent = 'Too large';
-      return;
-    }
-
-    resultEl.textContent = currency.format(result);
-
-    const op = mode === 'fv' ? '\u00D7' : '/';
-    const lhs = mode === 'fv' ? 'FV' : 'PV';
-    setMeta(
-      'Rate: ' + fmtRate.format(ratePct) + '% per yr',
-      'Period: ' + fmtYears.format(years) + (years === 1 ? ' yr' : ' yrs'),
-      {
-        before: lhs + ' = ' + fmtAmount.format(amount) + ' ' + op + ' (1 + ' + fmtDecimalRate.format(r) + ')',
-        exponent: fmtYears.format(years)
-      }
-    );
-    renderTimeline(years);
-  }
-
-  function setMode(newMode) {
-    mode = newMode;
-    tabs.forEach((tab, i) => {
-      const active = (i === 0) === (mode === 'fv');
-      tab.classList.toggle('active', active);
-      tab.setAttribute('aria-pressed', active);
-    });
-    amountLabel.textContent = mode === 'fv' ? 'Present Value ($)' : 'Future Value ($)';
+// Future Value Tab
+document.getElementById("btn-fv").onclick = () => {
+    mode = "fv";
+    document.getElementById("btn-fv").classList.add("active");
+    document.getElementById("btn-pv").classList.remove("active");
+    document.getElementById("lbl-amount").innerHTML = "Present Value ($)";
     calculate();
-  }
+};
 
-  tabs[0].addEventListener('click', () => setMode('fv'));
-  tabs[1].addEventListener('click', () => setMode('pv'));
-  [amountInput, rateInput, yearsInput].forEach((input) => {
-    input.addEventListener('input', calculate);
-  });
+// Present Value Tab
+document.getElementById("btn-pv").onclick = () => {
+    mode = "pv";
+    document.getElementById("btn-pv").classList.add("active");
+    document.getElementById("btn-fv").classList.remove("active");
+    document.getElementById("lbl-amount").innerHTML = "Future Value ($)";
+    calculate();
+};
 
-  setMode('fv');
-});
+// Input Boxes
+document.getElementById("txt-amount").onkeyup = () => {
+    calculate();
+};
+
+document.getElementById("txt-rate").onkeyup = () => {
+    calculate();
+};
+
+document.getElementById("txt-years").onkeyup = () => {
+    calculate();
+};
+
+// Calculate Result
+const calculate = () => {
+    const amount = parseFloat(document.getElementById("txt-amount").value);
+    const rate = parseFloat(document.getElementById("txt-rate").value);
+    const years = parseInt(document.getElementById("txt-years").value);
+    const result = document.getElementById("tvm-result");
+    const formula = document.getElementById("result-formula");
+
+    if(amount >= 0 && rate >= 0 && years >= 0 && years <= 100){
+        const r = rate / 100;
+
+        let growth = 1;
+        for(let i = 0; i < years; i++){
+            growth = growth * (1 + r);
+        }
+
+        if(mode == "fv"){
+            const fv = amount * growth;
+            result.innerHTML = "$" + fv.toFixed(2);
+            formula.innerHTML = `FV = ${amount} &times; (1 + ${r})<sup>${years}</sup>`;
+        } else {
+            const pv = amount / growth;
+            result.innerHTML = "$" + pv.toFixed(2);
+            formula.innerHTML = `PV = ${amount} / (1 + ${r})<sup>${years}</sup>`;
+        }
+
+        document.getElementById("result-rate").innerHTML = `Rate: ${rate}% per yr`;
+        document.getElementById("result-period").innerHTML = `Period: ${years} yrs`;
+        showTimeline(years);
+    } else {
+        result.innerHTML = "Enter valid numbers";
+        formula.innerHTML = "";
+        document.getElementById("result-rate").innerHTML = "Rate: -";
+        document.getElementById("result-period").innerHTML = "Period: -";
+        document.getElementById("timeline").innerHTML = "";
+    }
+};
+
+// Timeline
+const showTimeline = (years) => {
+    const timeline = document.getElementById("timeline");
+    timeline.innerHTML = "";
+
+    if(years <= 10){
+        for(let i = 0; i <= years; i++){
+            timeline.append(createNode(i));
+        }
+    } else {
+        timeline.append(createNode(0));
+        timeline.append(createNode(years));
+    }
+};
+
+const createNode = (year) => {
+    const div = document.createElement("div");
+    div.classList.add("timeline-node");
+    div.innerHTML = `<span class="node-yr">${year}</span>`;
+    return div;
+};
+
+calculate();

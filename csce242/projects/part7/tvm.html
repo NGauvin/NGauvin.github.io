@@ -158,42 +158,35 @@
 
       <div class="calc-box">
         <div class="calc-tabs">
-          <button class="calc-tab active">Compute Future Value</button>
-          <button class="calc-tab">Compute Present Value</button>
+          <button class="calc-tab active" id="btn-fv">Compute Future Value</button>
+          <button class="calc-tab" id="btn-pv">Compute Present Value</button>
         </div>
 
         <div class="calc-inputs">
           <div class="input-group">
-            <label>Present Value ($)</label>
-            <input type="text" inputmode="decimal" value="1000">
+            <label for="txt-amount" id="lbl-amount">Present Value ($)</label>
+            <input type="text" id="txt-amount" value="1000">
           </div>
           <div class="input-group">
-            <label>Annual Rate (%)</label>
-            <input type="text" inputmode="decimal" value="8">
+            <label for="txt-rate">Annual Rate (%)</label>
+            <input type="text" id="txt-rate" value="8">
           </div>
           <div class="input-group">
-            <label>Years (n)</label>
-            <input type="text" inputmode="decimal" value="5">
+            <label for="txt-years">Years (n)</label>
+            <input type="text" id="txt-years" value="5">
           </div>
         </div>
 
         <div class="calc-result-card">
-          <div class="result-display">$1,469.33</div>
+          <div class="result-display" id="tvm-result"></div>
           <div class="result-meta">
-            <span>Rate: 8% per yr</span>
-            <span>Period: 5 yrs</span>
-            <span>FV = 1000 &times; (1 + 0.08)<sup>5</sup></span>
+            <span id="result-rate"></span>
+            <span id="result-period"></span>
+            <span id="result-formula"></span>
           </div>
         </div>
 
-        <div class="calc-timeline">
-          <div class="timeline-node"><span class="node-yr">0</span></div>
-          <div class="timeline-node"><span class="node-yr">1</span></div>
-          <div class="timeline-node"><span class="node-yr">2</span></div>
-          <div class="timeline-node"><span class="node-yr">3</span></div>
-          <div class="timeline-node"><span class="node-yr">4</span></div>
-          <div class="timeline-node"><span class="node-yr">5</span></div>
-        </div>
+        <div class="calc-timeline" id="timeline"></div>
       </div>
     </section>
 

@@ -2199,3 +2199,31 @@ ul {
   padding: 0;
   line-height: 1;
 }
+
+/* JSON-rendered asset cards with images */
+.asset-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.asset-card-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background-color: var(--bg-light-cta);
+}
+
+.asset-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.asset-status {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-dark-muted);
+  font-size: 0.95rem;
+}
